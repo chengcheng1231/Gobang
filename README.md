@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+## React 入門：井字遊戲及五子棋
+以 React 來製作經典的策略棋盤遊戲，易於學習及上手，從簡單的 3x3 井字遊戲到有趣的 19x19 五子棋
+- [Demo](https://#/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Imgur](https://imgur.com/AzlStnv.gif)
 
-## Available Scripts
+### 五子棋功能
+- 基本棋盤切版，將棋子畫在交叉點而不是正中央
+- 以 `::after` 繪製棋盤背景
+- 將 3x3 棋盤擴展成 19x19 棋盤，且調整棋格大小
+- 以二維陣列存取棋盤狀態，記錄遊戲過程
+- 返回任意步驟的功能，允許玩家查看遊戲的歷史紀錄
+- 具有悔棋、取消悔棋的功能
+- 重新開始
+- 歷史紀錄會標示高亮顯示當前的版本
+- 紀錄棋譜的功能，點擊分享會以 html2canvas 擷取棋盤截圖
+![](https://imgur.com/1KDYGP5.jpg)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### 使用技術
+- 以 React 搭配 React-router 建立棋盤遊戲
+- 以 JSX 語法撰寫元件
+- 支援 RWD，使用 styled-component 以 Sass 進行排版
+- 使用 funciton component 及 useState 管理狀態
+- 導入 Prettier 讓程式碼格式統一
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 專案結構
+- /src
+    - /components
+        - App.js
+        - Home.js
+        - Gobang.js
+        - Tictactoe.js
+    - /constants
+        - gameType.js
+        - style.js
+    - /pages
+        - GobangPage.js
+        - TictactoePage.js
+    - index.js
+    - index.css
+    - utills.js: All Utility functions
