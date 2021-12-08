@@ -8,7 +8,7 @@
 - useState 管理狀態
 - 使用 Prettier 讓程式碼格式統一
 
-![Imgur](https://imgur.com/AzlStnv.gif)
+![](https://imgur.com/AzlStnv.gif)
 
 ### 五子棋功能
 - 以二維陣列來存取棋盤
